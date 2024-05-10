@@ -34,10 +34,6 @@ const ImageClassifier = () => {
     "Montserrat-Bold": require("../assets/fonts/Montserrat-Bold.ttf"),
   });
 
-  useEffect(() => {
-    StatusBar.setBarStyle("light-content");
-  }, []);
-
   const navigateToDiagnoseScreen = () => {
     navigation.navigate("DiagnoseScreen");
     setLabel("");
@@ -415,7 +411,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "space-between",
-    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
   },
   titleContainer: {
     height: 80,
